@@ -1,3 +1,7 @@
+use html_parser::parser::parse;
+
 fn main() {
-    println!("Hello, world!");
+    let html = include_str!("../index.html");
+    let node = parse(html);
+    println!("{:?}", node);
 }

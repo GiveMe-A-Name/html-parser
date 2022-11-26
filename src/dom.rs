@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[derive(Debug)]
 pub enum Node {
     Element(Element),
     Text(String),
@@ -7,6 +8,7 @@ pub enum Node {
 
 pub type AttrsMap = HashMap<String, String>;
 
+#[derive(Debug)]
 pub struct Element {
     pub tag: String,
     pub attributes: AttrsMap,
